@@ -1,0 +1,43 @@
+﻿@model ModelCL.PELICULA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PELICULA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_estreno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_estreno)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Comprar", "Index", new { controller = "Comprar", action = "Index", id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
